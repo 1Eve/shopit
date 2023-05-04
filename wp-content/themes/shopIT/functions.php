@@ -6,9 +6,11 @@
 
         wp_register_script('jsbootstrap','https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js', [], '5.2.3', false);
         wp_enqueue_script ('jsbootstrap');
+
+        wp_enqueue_style('customcss',  get_template_directory_uri().'/custom/custom.css', [], '1.0.0', 'all');
  
     }
-    
+
     add_action('wp_enqueue_scripts', 'shopit_theme_styles');
 
 // ADDING MENUS - HEADER AND FOOTER
