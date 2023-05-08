@@ -31,14 +31,3 @@
     }
 
 
-// USER ROLES
-function customer(){
-    add_role(
-        'Customer',
-        'Customer',
-        [
-            'read' => true,
-            'upload_file' => true,
-        ]
-        );
-}
