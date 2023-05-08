@@ -5,7 +5,7 @@
  */
 
 /**
- * Plug Name: Plug-shopIT
+ * Plug Name: plugshopIT
  * Plug URI: http://#
  * Description: Handles all the custom functions for our system
  * Version: 1.0.0
