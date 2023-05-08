@@ -1,9 +1,9 @@
 <?php get_header() ?>
 
 
-<div class="container border border-black mt-4">
-    <div class="container w-100 border-bottom border-black">ACCOUNT DETAILS</div>
-    <div class="container border border-black mt-3">
+<div class="container border border-black mt-4 bg-white">
+    <div class="container w-100 border-bottom border-black bg-white">ACCOUNT DETAILS</div>
+    <div class="container border border-black mt-3 bg-white">
         <div class="row">
             <div class="col-md-12">
                 <table class="table">

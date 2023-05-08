@@ -29,4 +29,16 @@
     } else {
         require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
     }
-    
+
+
+// USER ROLES
+function customer(){
+    add_role(
+        'Customer',
+        'Customer',
+        [
+            'read' => true,
+            'upload_file' => true,
+        ]
+        );
+}
