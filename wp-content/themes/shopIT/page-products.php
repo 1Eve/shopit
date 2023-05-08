@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
 <?php
 $bag = get_template_directory_uri() . '/assets/bag.jpg';
 ?>
@@ -262,6 +263,7 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
             <p>SEE MORE</p>
             <ion-icon name="chevron-forward"></ion-icon>
         </div>
+
     </div>
     <div class="product">
         <div class="item">
@@ -274,18 +276,22 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
             <img src="<?php echo $bag ?>" alt="bag">
             <p class="name">Generic outfit</p>
             <h2 class="price">Ksh 2,500</h2>
+
+            <p class="discount">Ksh 5,000</p>
+        </div>
+        <div class="item">
+            <img src="<?php echo $bag ?>" alt="bag">
+            <p class="name">Generic outfit</p>
+
+            <h2 class="price">Ksh 2,500</h2>
+
             <p class="discount">Ksh 5,000</p>
         </div>
         <div class="item">
             <img src="<?php echo $bag ?>" alt="bag">
             <p class="name">Generic outfit</p>
             <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
+
             <p class="discount">Ksh 5,000</p>
         </div>
     </div>
@@ -299,11 +305,13 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
             <p>SEE MORE</p>
             <ion-icon name="chevron-forward"></ion-icon>
         </div>
+
     </div>
     <div class="product">
         <div class="item">
             <img src="<?php echo $bag ?>" alt="bag">
             <p class="name">Generic outfit</p>
+
             <h2 class="price">Ksh 2,500</h2>
             <p class="discount">Ksh 5,000</p>
         </div>
@@ -311,22 +319,26 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
             <img src="<?php echo $bag ?>" alt="bag">
             <p class="name">Generic outfit</p>
             <h2 class="price">Ksh 2,500</h2>
+
             <p class="discount">Ksh 5,000</p>
         </div>
         <div class="item">
             <img src="<?php echo $bag ?>" alt="bag">
             <p class="name">Generic outfit</p>
+
             <h2 class="price">Ksh 2,500</h2>
             <p class="discount">Ksh 5,000</p>
         </div>
         <div class="item">
             <img src="<?php echo $bag ?>" alt="bag">
             <p class="name">Generic outfit</p>
+
             <h2 class="price">Ksh 2,500</h2>
             <p class="discount">Ksh 5,000</p>
         </div>
     </div>
 </div>
+
 
 
 <div class="Products-container">
@@ -336,11 +348,13 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
             <p>SEE MORE</p>
             <ion-icon name="chevron-forward"></ion-icon>
         </div>
+
     </div>
     <div class="product">
         <div class="item">
             <img src="<?php echo $bag ?>" alt="bag">
             <p class="name">Generic outfit</p>
+
             <h2 class="price">Ksh 2,500</h2>
             <p class="discount">Ksh 5,000</p>
         </div>
@@ -348,22 +362,28 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
             <img src="<?php echo $bag ?>" alt="bag">
             <p class="name">Generic outfit</p>
             <h2 class="price">Ksh 2,500</h2>
+
             <p class="discount">Ksh 5,000</p>
         </div>
         <div class="item">
             <img src="<?php echo $bag ?>" alt="bag">
             <p class="name">Generic outfit</p>
+
             <h2 class="price">Ksh 2,500</h2>
+
             <p class="discount">Ksh 5,000</p>
         </div>
         <div class="item">
             <img src="<?php echo $bag ?>" alt="bag">
             <p class="name">Generic outfit</p>
+
             <h2 class="price">Ksh 2,500</h2>
+
             <p class="discount">Ksh 5,000</p>
         </div>
     </div>
 </div>
+
 
 <div class="Products-container">
     <div class="Cheader">
@@ -472,5 +492,6 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
         </div>
     </div>
 </div> -->
+
 
 <?php get_footer(); ?>
