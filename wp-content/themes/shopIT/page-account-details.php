@@ -2,7 +2,8 @@
 
 
 <div class="container border border-black mt-4 bg-white">
-    <div class="container w-100 border-bottom border-black bg-white">ACCOUNT DETAILS</div>
+    <div style="padding-top: 20px;" class="container w-100  border-black bg-white">ACCOUNT DETAILS</div>
+    <hr>
     <div class="container border border-black mt-3 bg-white">
         <div class="row">
             <div class="col-md-12">
@@ -30,8 +31,8 @@
         </div>
 
     </div>
-    <div class="d-grid gap-2 mt-5">
-      <button class="btn btn-warning" type="button">EDIT DETAILS</button>
+    <div class="" style="justify-content:center; align-items: center; display: flex; ">
+      <button class="btn" type="button" style="background-color:#F68B1E;margin-top: 80px; width:40%;">EDIT DETAILS</button>
     </div>
 </div>
 
