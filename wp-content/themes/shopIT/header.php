@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <title>shopIT</title>
     <?php wp_head(); ?>
 </head>
+
 <body>
-    
-    <!-- NAVWALKER -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1"
-                aria-expanded="false" aria-label="<?php esc_attr_e('Toggle navigation', 'your-theme-slug'); ?>">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="http://localhost/shopIT/">shopIT</a>
-            <?php
-            wp_nav_menu(
-                array(
-                    'theme_location' => 'primary',
-                    'depth' => 2,
-                    'container' => 'div',
-                    'container_class' => 'collapse navbar-collapse',
-                    'container_id' => 'bs-example-navbar-collapse-1',
-                    'menu_class' => 'nav navbar-nav',
-                    'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                    'walker' => new WP_Bootstrap_Navwalker(),
-                ));
-            ?>
-        </div>
-    </nav>
+    <?php
+    $logo = get_template_directory_uri() . '/assets/logo.png';
+    ?>
+    <div class="Ncontainer">
+        <nav >
+            <div class="Nlogo">
+                <a href=""><img src="<?php echo $logo ?>" alt="bag"></a>
+                
+            </div>
+            <form action="">
+                <div class="navSearch">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" placeholder="search for products">
+                    <button>Search</button>
+
+                </div>
+            </form>
+            <div class="nav-items">
+                <div>
+                    <a href="http://localhost/shopIT/products/">All products</a>
+                </div>
+                <div class="personalAccount">
+                    <ion-icon name="person-outline" size="large"></ion-icon>
+                    <h2>Account</h2>
+                    <ion-icon class="dropdown" name="chevron-down-outline" ></ion-icon>
+                </div>
+                <div class="navCart">
+                    <ion-icon name="cart-outline" size="large"></ion-icon>
+                    <h2>Cart</h2>
+                </div>
+            </div>
+        </nav>
+    </div>
