@@ -1,4 +1,5 @@
 <footer>
+  
     <div class="footer-container">
         <div class="shopIT">
             <h1>shopIT</h1>
@@ -24,6 +25,7 @@
         </div>
     </div>
     <div class="Copyright">
+        <hr>
         <a>Copyright 2013 - 2023 All Rights Reserved. </a>
     </div>
 

@@ -7,67 +7,120 @@ p{
     padding: 0; 
     margin: 0;
 }
-
+a{
+    text-decoration: none;
+}
 /* Nav */
 
 nav{
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
+    padding: 10px;
     align-items: center;
-    height: 80px;
-    background-color: red;
-    border-radius: 8px;
+    height: 60px;
+    background-color: white;
+    margin: 0 5%;
+}
+.Nlogo{
+    height: 35px;
+}
+.Nlogo img{
+    height: 100%;
+}
+.Ncontainer{
+    background-color: white;
 }
 .nav-items{
     display: flex;
+    justify-content: space-between;
+    width: 40%;
 }
 .nav-items>div{
     display: flex;
 }
-.navSearch{
-    border: 1px solid black;
-    width: 330px;
-    height: 50px;
-    position: relative;
-    border-radius: 5px;
+.nav-items>div :nth-child(-n+1) {
+    /* width: 90px; */
 }
-.navSearch input{
+.nav-items a{
+    width: 100%;
+    color: #313133;
+    font-weight: 500;
+    font-size: 1.2em;
+    margin-top:5px;
+    text-align: inherit;
+    cursor: pointer;
+}
+.dropdown{
+    margin-top: 13px;
+}
+.navSearch{
+    /* border: 1px solid black; */
+    width: 350px;
+    height: 40px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px; 
+}
+form input[type="text"]{
     width: 100%;
     height: 100%;
+    padding: 5px;
+    border: none;
+    /* background-color: #fff; */
+    border-radius: 8px; 
+    
 }
+
 .navSearch *{
     position: absolute;
+}
+.navSearch ion-icon{
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
 .navSearch button{
     right: 0;
     height: 100%;
-    padding: 10px 24px;
+    padding: 0 24px;
+    text-align: center;
+    border:none;
+    border-radius: 5px; 
+    background-color: #F68B1E;
 }
+
 .personalAccount h2, .navCart h2{
     margin-left: 10px;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.2em;
     margin: 7px;  
 }
-.nav-items div:nth-child(-n+1){
 
-}
+/* drop downn */
+.hover {
+    display: none;
+  }
+
+
+/* Products */
 .Products-container{
     border-radius: 5px;
-    margin: 40px 5%;
+    margin: 0 5% 30px 5%;
     background-color: #fff;
   
 }
 .Pheader{
-    margin: 40px 5%;
-    background-color: aqua;
+    /* margin: 40px 5%; */
+    /* background-color: aqua; */
     /* padding: 10px; */
     border-radius: 5px;
     height: 250px;
 }
 .Pheader div{
-    background-color: #fff;
+    background-image: url("../assets/electronics.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
     margin: 10px;
     height: 100%;
 }
@@ -75,7 +128,7 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    /* background-image: url("../assets/electronics.jpg"); */
+    
     /* background-color: #F68B1E;  */
     border-radius: 10px 10px 0 0; 
 }
@@ -98,23 +151,23 @@ hr{
     grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
 }
 .item{
-    text-align: center;
+    /* text-align: center; */
     padding: 15px;
 }
 .name{
-    font-size: 14px;
+    font-size: 15px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
 .discount{
     text-decoration: line-through;
-    font-size: small;
+    font-size:13px;
     font-weight: 400;
     opacity: 0.7;
 }
 .price{
-    font-size: 16px; 
+    font-size: 17px; 
     margin-bottom: -0.3em; 
 }
 
@@ -156,6 +209,7 @@ footer a, ul{
     padding-top: 50px;
 }
 
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -251,3 +305,9 @@ footer a, ul{
   }
   
   
+=======
+
+
+
+
+>>>>>>> d16338c8ac02c8f1b28295e49a8d8c673696a496

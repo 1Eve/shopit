@@ -6,18 +6,16 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
 ?>
 <div class="Pheader">
     <div>
-    <h2>Shop Computers </h2>
-    <h2>& Accessories</h2>
-    <p></p>
+        
     </div>
-    
+
 </div>
 
 <div class="Products-container">
     <div>
         <div class="Cheader">
             <h2>Top Picks</h2>
-            
+
             <!-- <div>
                 <p>SEE MORE</p>
                 <ion-icon name="chevron-forward"></ion-icon>
