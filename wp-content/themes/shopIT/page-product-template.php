@@ -20,10 +20,11 @@ get_header() ?>
 
             <div class="card">
             <div class="card-header">
+            <?php the_title()?>
                 <?php the_title(sprintf('<h2 class="entry-title"> <a href="%s">', esc_url(get_permalink() )), '</a></h2>') ?>
             </div>
             <div class="card-body">
-                <h5 class="thumbnail-img"><?php the_post_thumbnail('thumbnail') ?></h5>
+                <h5 class="thumbnail-img"><?php the_post_thumbnail() ?></h5>
                 <p class="card-text"><?php the_content() ?></p>
                 <p class="card-text"><?php the_category() ?></p>
                 
