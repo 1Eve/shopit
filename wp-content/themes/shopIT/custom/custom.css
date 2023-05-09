@@ -33,16 +33,12 @@ nav{
 .nav-items{
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    width: 42%;
 }
 .nav-items>div{
     display: flex;
 }
-.nav-items>div :nth-child(-n+1) {
-    /* width: 90px; */
-}
 .nav-items a{
-    width: 100%;
     color: #313133;
     font-weight: 500;
     font-size: 1.2em;
@@ -61,7 +57,7 @@ nav{
     border: 1px solid black;
     border-radius: 5px; 
 }
-form input[type="text"]{
+.Ncontainer form input[type="text"]{
     width: 100%;
     height: 100%;
     padding: 5px;
@@ -89,6 +85,28 @@ form input[type="text"]{
     background-color: #F68B1E;
 }
 
+.personalAccount{
+    position: relative;
+}
+.Pdiv{
+    display: flex;
+}
+.SSacount{
+    position: absolute;
+    background-color: #fff;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    transform: translateY(100%);
+}
+.SSacount a{
+    font-weight: 400;
+}
+.personalAccount:hover .SSacount{
+    display: flex;
+}
 .personalAccount h2, .navCart h2{
     margin-left: 10px;
     font-weight: 500;
@@ -314,3 +332,7 @@ footer a, ul{
   }
   
   
+
+
+
+
