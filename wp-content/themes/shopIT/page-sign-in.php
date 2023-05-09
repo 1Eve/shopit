@@ -8,11 +8,15 @@
       <form action="">
         <div class="input">
           <label for="">Email or phone number</label>
-          <input type="text" placeholder="Enter Name or email">
+          <div class="in1">
+          <input type="text" placeholder="Enter Email or phone">
+          </div>
         </div>
         <div class="input">
           <label for="">Password</label>
+          <div class="in1">
           <input type="text" placeholder="Enter password">
+          </div>
         </div>
         <a href="">Forgot password?</a>
         <div class="input">
