@@ -34,13 +34,19 @@
                     <a href="http://localhost/shopIT/products/">All products</a>
                 </div>
                 <div class="personalAccount">
-                    <ion-icon name="person-outline" size="large"></ion-icon>
-                    <h2>Account</h2>
-                    <ion-icon class="dropdown" name="chevron-down-outline" ></ion-icon>
+                    <div class="Pdiv">
+                        <ion-icon name="person-outline" size="large"></ion-icon>
+                        <h2>Account</h2>
+                        <ion-icon class="dropdown" name="chevron-down-outline" ></ion-icon>
+                    </div>
+                    <div class="SSacount">
+                        <a href="">Sign in</a>
+                        <a href="">Sign up</a>
+                    </div>
                 </div>
                 <div class="navCart">
                     <ion-icon name="cart-outline" size="large"></ion-icon>
-                    <h2>Cart</h2>
+                    <a href="">Cart</a>
                 </div>
             </div>
         </nav>
