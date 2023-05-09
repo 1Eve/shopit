@@ -18,7 +18,8 @@
     <div class="Ncontainer">
         <nav >
             <div class="Nlogo">
-                <img src="<?php echo $logo ?>" alt="bag">
+                <a href=""><img src="<?php echo $logo ?>" alt="bag"></a>
+                
             </div>
             <form action="">
                 <div class="navSearch">
