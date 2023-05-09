@@ -58,7 +58,18 @@
         </div>
         </div>  
         <div class="" style="justify-content:center; align-items: center; display: flex; ">
-      <button class="btn" type="button" style="background-color:#F68B1E; width:40%;">EDIT DETAILS</button>
+      <button id="button" class="btn" type="button" style="background-color:#F68B1E; width:40%;">EDIT DETAILS</button>
+      <script>
+        function redirectToPage() {
+            window.location.href = "https://www.example.com";
+            }
+
+            var myButton = document.getElementById("button");
+            myButton.addEventListener("click", 'shopIT/wp-admin/profile.php');
+
+      </script>
+
+      
     </div>
     </div>
 </div>
