@@ -15,25 +15,32 @@
     <?php
     $logo = get_template_directory_uri() . '/assets/logo.png';
     ?>
-    <nav class="container">
-        <div>
-            <h1>Logo</h1>
-        </div>
-        <form action="">
-            <div class="navSearch">
-                <input type="text" placeholder="search for products">
-                <button>Search</button>
+    <div class="Ncontainer">
+        <nav >
+            <div class="Nlogo">
+                <img src="<?php echo $logo ?>" alt="bag">
+            </div>
+            <form action="">
+                <div class="navSearch">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" placeholder="search for products">
+                    <button>Search</button>
 
+                </div>
+            </form>
+            <div class="nav-items">
+                <div>
+                    <a href="http://localhost/shopIT/products/">All products</a>
+                </div>
+                <div class="personalAccount">
+                    <ion-icon name="person-outline" size="large"></ion-icon>
+                    <h2>Account</h2>
+                    <ion-icon class="dropdown" name="chevron-down-outline" ></ion-icon>
+                </div>
+                <div class="navCart">
+                    <ion-icon name="cart-outline" size="large"></ion-icon>
+                    <h2>Cart</h2>
+                </div>
             </div>
-        </form>
-        <div class="nav-items">
-            <div class="personalAccount">
-                <ion-icon name="person-outline" size="large"></ion-icon>
-                <h2>Account</h2>
-            </div>
-            <div class="navCart">
-                <ion-icon name="cart-outline" size="large"></ion-icon>
-                <h2>Cart</h2>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
