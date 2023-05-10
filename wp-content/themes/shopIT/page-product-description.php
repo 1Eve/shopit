@@ -5,7 +5,7 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
 ?>
 
 
-<div class="container-fluid page-container">
+<div class="container">
   <p class="p-2">Home > Fashion > Women’s Fashion > Hand bags & Wallets > Generic Classy Big Box Sling Bag
   </p>
   <div class="row mb-2 mt-2" style="background-color: #ffffff;">
@@ -19,7 +19,7 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
           <!-- Thumbnails -->
           <div class="row">
             <div class="col-3">
-              <img src="<?php echo $bag ?>" alt="bag" class="img-fluid">
+              <img src="<?php echo $bag ?>" alt="bag" class="img-fluid border-1">
             </div>
             <div class="col-3">
               <img src="<?php echo $bag ?>" alt="bag" class="img-fluid">
@@ -47,7 +47,7 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
           <p class="card-text font-weight-light discount">KSh 2,100</p>
           <p class="card-text font-weight-bold" style="color:#4ED02E; font-weight:700;">In stock</p>
 
-          <button class="w-100 rounded " style="background-color:#F68B1E;margin-top: 50px;margin-bottom: 80px;">
+          <button class="w-50 rounded border-0 " style="background-color:#F68B1E;margin-top: 50px;margin-bottom: 80px;">
             <p class="p-2" style="color:#ffffff;">Add to Cart</p>
 
           </button>
@@ -59,7 +59,7 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
 
 
 
-  <div class=" card row w-75  mb-2 " style="background-color: #ffffff;">
+  <div class=" card row w-75  " style="background-color: #ffffff;">
     <p class="p-2  product-desc-title" style="font-weight:600;">About the Item</p>
     <hr>
 
@@ -70,12 +70,10 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
       <li class="">4.5"D x 12.5"W x 11.5"H (12" Drop)</li>
       <li class="">Includes a side zippered pocket and two open pockets</li>
       <li class="">Soft Montana West printed fabric lining</li>
-      <li class="">Essential for casual, work, and school use</li>
+      <li class="mb-2">Essential for casual, work, and school use</li>
     
 
-  </div>
-
-  <div class=" card row w-50  mb-2 " style="background-color: #ffffff;">
+      <div class=" row   mb-2 " >
     <p class="p-2  product-desc-title" style="font-weight:600;">Customer Reviews</p>
     <hr>
     <ul style="list-style-type:none; font-size:18px;">
@@ -87,13 +85,15 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
       <hr>
       <p class="  product-desc-title" style="font-weight:600;">Review this product</p>
       <p class="pb-2">Share your thoughts with other customers</p>
-      <button class="w-100  " style="background-color:#000000;margin-bottom: 30px;">
+      <button class="w-50 rounded border-0 " style="background-color:#282828;margin-bottom: 30px;">
         <p class="p-2" style="color:#ffffff;">Write a customer review</p>
 
       </button>
   </div>
+  </div>
+
   <!-- Recommended items -->
-  <div class=" card row w-100  mb-2">
+  <div class=" card row w-100 mt-2  mb-2">
     <div class="" style="background-color: #ffffff;">
       <p class="" style="font-size:20px; font-weight: 600;">You may also like</p>
     </div>
