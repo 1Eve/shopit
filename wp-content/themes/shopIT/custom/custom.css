@@ -321,7 +321,10 @@ footer a, ul{
     border: none;
   }
   
-  
+  .delete-icon{
+color: red;
+margin-left: -10%;
+  }
 
 
 
