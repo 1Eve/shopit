@@ -1,14 +1,26 @@
 body{
     background-color: #E3E7E7;
     color: #313133;
+    height: 100%;
+    
     
 }
+
+footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 p{
     padding: 0; 
     margin: 0;
 }
 a{
     text-decoration: none;
+}
+.book-inputs{
+    padding-bottom: 300px;
 }
 /* Nav */
 
@@ -121,16 +133,8 @@ nav{
 
 
 /* Products */
-.Products-container{
-    border-radius: 5px;
-    margin: 0 5% 30px 5%;
-    background-color: #fff;
-  
-}
+
 .Pheader{
-    /* margin: 40px 5%; */
-    /* background-color: aqua; */
-    /* padding: 10px; */
     border-radius: 5px;
     height: 250px;
 }
@@ -164,13 +168,41 @@ hr{
     height: 2px;
     margin: 0;
 }
-.product{
+.container-grid{
+    width: 100vw;
+}
+
+.Products-container{
+    border-radius: 5px;
+    margin: 0 5% 30px 5%;
+    background-color: #fff;
+    border: 1px solid black;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+}
+.product img{
+    width: 180px;
+    height: 180px;
+}
+.Cfooter{
+    bottom: 0;
+}
+.test-div{
+    background-color: black;
+    width: 100%;
 }
 .item{
-    /* text-align: center; */
-    padding: 15px;
+   
+}
+.Tcontainer{
+    margin: 1px solid red;
+}
+.item>div {
+    width: 100%;
+    height: 150px;
+}
+.item>div img{
+    height: 50px;
 }
 .name{
     font-size: 15px;
@@ -199,6 +231,10 @@ footer{
     height: 250px;
     padding: 10px;
     color: #fff;
+    margin-top: 50px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-container{
@@ -226,7 +262,90 @@ footer a, ul{
 .shopIT p{
     padding-top: 50px;
 }
+/* Add items */
 
+.Addproducts{
+    width: 500px;
+    height: 500px;
+    
+    background-color: orange;
+    color: white;
+}
+.Mainimg{
+    width: 180px;
+    height: 180px;  
+}
+.Rowimg{
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.Additem{
+    /* background-color: ; */
+
+}
+
+/* View Items */
+
+.Table_view_products{
+    background-color: red;
+}
+#price, #discount, #product_name{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.Table_head{
+    
+}
+.Table_head tr{
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    
+    /* grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); */
+}
+.Table_view_products .mainimg{
+    height: 50px;
+    width: 50px;
+}
+.Table_view_products .row_img{
+    height: 50px;
+    width: 50px;
+}
+.Table_view_products .mainimg img{
+    height: 100%;
+}
+.Table_view_products .row_img img{
+    height: 100%;
+}
+
+/* .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-gap: 10px; /* Optional: Add a gap between grid items 
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
 * {
     margin: 0;
     padding: 0;

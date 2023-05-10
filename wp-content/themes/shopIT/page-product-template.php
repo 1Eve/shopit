@@ -4,7 +4,19 @@
  */
 
 get_header() ?>
+<?php
 
+global $wpdb;
+$table = $wpdb->prefix . 'books';
+
+$books = $wpdb->get_results("SELECT * FROM $table");
+
+// echo '<pre>';
+// var_dump($books);
+// echo '</pre>'
+
+
+?>
 
 <?php 
     $args = [
