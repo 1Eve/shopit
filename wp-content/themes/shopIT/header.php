@@ -18,9 +18,10 @@
     <div class="Ncontainer">
         <nav >
             <div class="Nlogo">
-                <a href=""><img src="<?php echo $logo ?>" alt="bag"></a>
-                
+                <a href=""><img src="<?php echo $logo ?>" alt="bag"></a>    
             </div>
+            <a href="http://localhost/shopIT/book-v/">Book view</a>
+            <a href="http://localhost/shopIT/book-reg/">Book Registration</a>
             <form action="">
                 <div class="navSearch">
                     <ion-icon name="search-outline"></ion-icon>

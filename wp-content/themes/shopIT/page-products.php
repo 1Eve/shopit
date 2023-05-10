@@ -1,507 +1,66 @@
-<?php get_header(); ?>
 <?php
-$args = [
-    'post_type' => 'product',
-    'posts_per_page' => 100
-];
 
-$products = new WP_Query($args);
-
-if ($products->have_posts()) :
-    while ($products->have_posts()) : $products->the_post();
+/**
+ * Template Name: Product Books
+ */
+get_header();
 ?>
-
-        <?php
-        $bag = get_template_directory_uri() . '/assets/bag.jpg';
-        ?>
-
-
-        <div class="Pheader">
-            <div></div>
-        </div>
-
-        <div class="Products-container">
-            <div>
-                <div class="Cheader">
-                    <h2>Top Picks</h2>
-
-                    <!-- <div>
-                <p>SEE MORE</p>
-                <ion-icon name="chevron-forward"></ion-icon>
-            </div> -->
-                </div>
-                <hr>
-                <div class="product">
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quos dicta, rerum, sint non reiciendis cum nemo possimus nam harum aliquid. Ab, distinctio. Eum, quas et. Rerum voluptatem repellat nihil.</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="Pcontainer">
-                <div class="product">
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="Pcontainer">
-                <div class="product">
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="Pcontainer">
-                <div class="product">
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="Pcontainer">
-                <div class="product">
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="Pcontainer">
-                <div class="product">
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="Pcontainer">
-                <div class="product">
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="Pcontainer">
-                <div class="product">
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo $bag ?>" alt="bag">
-                        <p class="name">Generic outfit</p>
-                        <h2 class="price">Ksh 2,500</h2>
-                        <p class="discount">Ksh 5,000</p>
-                    </div>
-                </div>
-            </div>
-        </div>
 <?php
-    endwhile;
-endif;
+
+global $wpdb;
+$table = $wpdb->prefix . 'books';
+
+$books = $wpdb->get_results("SELECT * FROM $table");
+
+// echo '<pre>';
+// var_dump($books);
+// echo '</pre>'
+
+
 ?>
-<!-- <div class="Products-container">
-    <div class="Cheader">
-        <p>Top picks</p>
-        <div>
-            <p>SEE MORE</p>
-            <ion-icon name="chevron-forward"></ion-icon>
-        </div>
+<div class="container-grid">
 
+    <div class="Pheader">
+        <div></div>
     </div>
-    <div class="product">
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-
-            <h2 class="price">Ksh 2,500</h2>
-
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-
-            <p class="discount">Ksh 5,000</p>
-        </div>
-    </div>
-</div>
-
-
-<div class="Products-container">
-    <div class="Cheader">
-        <p>Top picks</p>
-        <div>
-            <p>SEE MORE</p>
-            <ion-icon name="chevron-forward"></ion-icon>
-        </div>
-
-    </div>
-    <div class="product">
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
+    
+    <div class="Products-container">
+        <!-- <div>
+            <div class="Cheader">
+                <h2>Top Picks</h2>
+            </div>
+            <hr>
+            <?php 
+            // foreach ($books as $book) 
+            {
+            ?>
+            <div class="product">
+                <div class="item">
+                    <img src="<?php //echo $book->main_img; ?>" alt="">
+                    <p class="name"><?php //echo $book->product_name; ?></p>
+                    <h2 class="price"><?php //echo $book->price; ?></h2>
+                    <p class="discount"><?php //echo $book->discount; ?></p>
+                </div>
+            <?php } ?>
+        </div> -->
+    
+        <div class="Pcontainer">
+            <?php
+            foreach ($books as $book) {
+            ?>
+            <div class="product">
+                <div class="item">
+                    <img src="<?php echo $book->main_img; ?>" alt="">
+                    <p class="name"><?php echo $book->product_name; ?></p>
+                    <h2 class="price"><?php echo $book->price; ?></h2>
+                    <p class="discount"><?php echo $book->discount; ?></p>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </div>
 
-
-
-<div class="Products-container">
-    <div class="Cheader">
-        <p>Top picks</p>
-        <div>
-            <p>SEE MORE</p>
-            <ion-icon name="chevron-forward"></ion-icon>
-        </div>
-
-    </div>
-    <div class="product">
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-
-            <h2 class="price">Ksh 2,500</h2>
-
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-
-            <h2 class="price">Ksh 2,500</h2>
-
-            <p class="discount">Ksh 5,000</p>
-        </div>
-    </div>
+<div class="Cfooter">
+    <?php get_footer(); ?>
 </div>
 
-
-<div class="Products-container">
-    <div class="Cheader">
-        <p>Top picks</p>
-        <div>
-            <p>SEE MORE</p>
-            <ion-icon name="chevron-forward"></ion-icon>
-        </div>
-    </div>
-    <div class="product">
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-    </div>
-</div>
-
-<div class="Products-container">
-    <div class="Cheader">
-        <p>Top picks</p>
-        <div>
-            <p>SEE MORE</p>
-            <ion-icon name="chevron-forward"></ion-icon>
-        </div>
-    </div>
-    <div class="product">
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-    </div>
-</div>
-
-<div class="Products-container">
-    <div class="Cheader">
-        <p>Top picks</p>
-        <div>
-            <p>SEE MORE</p>
-            <ion-icon name="chevron-forward"></ion-icon>
-        </div>
-    </div>
-    <div class="product">
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-        <div class="item">
-            <img src="<?php echo $bag ?>" alt="bag">
-            <p class="name">Generic outfit</p>
-            <h2 class="price">Ksh 2,500</h2>
-            <p class="discount">Ksh 5,000</p>
-        </div>
-    </div>
-</div> -->
-
-
-<?php get_footer(); ?>
