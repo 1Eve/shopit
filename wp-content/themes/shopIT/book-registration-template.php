@@ -53,22 +53,24 @@
         }
     ?>
 
-    <div class="book-inputs row justify-content-center">
-        <form action="" method="post" style="width:40vw; box-shadow: 3px 3px 3px 3px grey; padding:30px; ">
+    <div class="input-grid-container row justify-content-center">
+        <form action="" method="post" style="width:50vw; box-shadow: 3px 3px 3px 3px grey; padding:30px; ">
             <div class="form-group">
-                <input type="text" name="main_img" id="main_img" class="form-control input-sm mb-3" placeholder="Input Main img" required>
+                <input type="text" name="main_img" id="main_img" class="form-control input-sm mb-3" placeholder="input main img url" required>
             </div>
-            <div class="form-group">
-                <input type="text" name="image2" id="image2" class="form-control input-sm mb-3" placeholder="image2" required>
-            </div>
-            <div class="form-group">
-                <input type="text" name="image3" id="image3" class="form-control input-sm mb-3" placeholder="image3" required>
-            </div>
-            <div class="form-group">
-                <input type="text" name="image4" id="image4" class="form-control input-sm mb-3" placeholder="image4" required>
-            </div>
-            <div class="form-group">
-                <input type="text" name="image5" id="image5" class="form-control input-sm mb-3" placeholder="image5" required>
+            <div class="input-thumbnail">
+                <div class="form-group">
+                    <input type="text" name="image2" id="image2" class="form-control input-sm mb-3" placeholder="thumbnail url" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="image3" id="image3" class="form-control input-sm mb-3" placeholder="thumbnail url" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="image4" id="image4" class="form-control input-sm mb-3" placeholder="thumbnail url" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="image5" id="image5" class="form-control input-sm mb-3" placeholder="thumbnail url" required>
+                </div>
             </div>
             <div class="form-group">
                 <input type="text" name="price" id="price" class="form-control input-sm mb-3" placeholder="price" required>
@@ -82,7 +84,7 @@
 
             <div class="row justify-content-center">
                 <div class="col-xs-4 col-sm-4 col-md-4">
-                    <input type="submit" value="Register Book" name="submitbtn" class="btn btn-primary">
+                    <input type="submit" value="Register Book" name="submitbtn" class="btn btn-color">
                 </div>
             </div>
         </form>
