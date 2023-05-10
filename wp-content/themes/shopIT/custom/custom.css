@@ -227,19 +227,22 @@ footer a, ul{
     padding-top: 50px;
 }
 
+
+/* sign-in custom css */
 * {
     margin: 0;
     padding: 0;
   }
   .s-in {
     display: flex;
-    height: 450px;
+    height: 100vh;
     background: #e3e7e7;
+    justify-content: center;
+    align-items: center;
   }
   .sign-in {
     width: 250px;
     height: 325px;
-    margin: 60px auto;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -266,8 +269,9 @@ footer a, ul{
   }
 .in1{
     border: 1px solid black;
-    border-radius: 9px;
+    border-radius: 5px;
 }
+/* sign-up custom css */
   .s-up {
     display: flex;
     background: #e3e7e7;
