@@ -6,11 +6,6 @@ body{
     
 }
 
-footer{
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
 
 p{
     padding: 0; 
@@ -19,8 +14,11 @@ p{
 a{
     text-decoration: none;
 }
-.book-inputs{
-    padding-bottom: 300px;
+.input-grid-container{
+    padding: 30px;
+}
+.input-thumbnail{
+    display: flex;
 }
 /* Nav */
 
@@ -66,16 +64,15 @@ nav{
     width: 350px;
     height: 40px;
     position: relative;
-    border: 1px solid black;
     border-radius: 5px; 
 }
 .Ncontainer form input[type="text"]{
-    width: 100%;
+    /* width: 100%;
     height: 100%;
     padding: 5px;
     border: none;
-    /* background-color: #fff; */
-    border-radius: 8px; 
+    /* background-color: #fff; 
+    border-radius: 8px;  */
     
 }
 
@@ -148,61 +145,43 @@ nav{
 }
 .Cheader{
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    
-    /* background-color: #F68B1E;  */
     border-radius: 10px 10px 0 0; 
 }
-.Cheader div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .Cheader h2{
-    margin: 0;
-    padding: 0;
-    font-size:1.5em;
+    font-size:1.5em;   
 } 
-hr{
-    height: 2px;
-    margin: 0;
-}
-.container-grid{
-    width: 100vw;
+
+.pcontainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
 }
 
-.Products-container{
-    border-radius: 5px;
-    margin: 0 5% 30px 5%;
-    background-color: #fff;
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+.btn-color{
+    background-color: #F68B1E;
+    width: 200px;
 }
-.product img{
+.products-container{
+    background-color: white;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+.item{
+    margin: 30px 5% 30px 5%;
+}
+.item *{
+    justify-content: center;
+    align-items: center;
+}
+.item img{
     width: 180px;
     height: 180px;
 }
-.Cfooter{
-    bottom: 0;
-}
-.test-div{
-    background-color: black;
-    width: 100%;
-}
-.item{
-   
-}
-.Tcontainer{
-    margin: 1px solid red;
-}
-.item>div {
-    width: 100%;
-    height: 150px;
-}
-.item>div img{
-    height: 50px;
+.producthead{
+    margin: 0;
+    padding: 0;
+    font-size:1.5em;
 }
 .name{
     font-size: 15px;
@@ -221,7 +200,6 @@ hr{
     margin-bottom: -0.3em; 
 }
 
-
 /* Footer */
 
 footer{
@@ -231,10 +209,7 @@ footer{
     height: 250px;
     padding: 10px;
     color: #fff;
-    margin-top: 50px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+     
 }
 
 .footer-container{
