@@ -39,11 +39,8 @@
                     <ion-icon class="dropdown" name="chevron-down-outline" ></ion-icon>
                 </div>
                 <div class="navCart">
-                    <a href="http://localhost/shopIT/cart/">
-                    <ion-icon name="cart-outline" size="large"></ion-icon></a>
+                    <ion-icon name="cart-outline" size="large"></ion-icon>
                     <h2>Cart</h2>
-                    
-                   
                 </div>
             </div>
         </nav>
