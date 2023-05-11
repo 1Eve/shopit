@@ -4,7 +4,15 @@
 $bag = get_template_directory_uri() . '/assets/bag.jpg';
 ?>
 
+<?php
 
+global $wpdb;
+$table = $wpdb->prefix . 'books';
+
+$books = $wpdb->get_results("SELECT * FROM $table");
+
+
+?>
 <div class="container">
   <p class="p-2">Home > Fashion > Women’s Fashion > Hand bags & Wallets > Generic Classy Big Box Sling Bag
   </p>
@@ -13,8 +21,9 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
       <!-- Product image and thumbnails -->
       <div class="card border-0 product-container">
         <div class="card-body">
+
           <!-- Product image -->
-          <img src="<?php echo $bag ?>" alt="bag" class=" rounded mx-auto d-block img-fluid mb-3" style="width: 50%;">
+          <img src="<?php echo $product_image; ?>" alt="bag" class=" rounded mx-auto d-block img-fluid mb-3" style="width: 50%;">
 
           <!-- Thumbnails -->
           <div class="row">
@@ -63,33 +72,35 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
     <p class="p-2  product-desc-title" style="font-weight:600;">About the Item</p>
     <hr>
 
-      <li class="">Oversized PU leather tote bags CARRY ALL your needs</li>
-      <li class="">Imported</li>
-      <li class="">Top zipper closure</li>
-      <li class="">A CARRY-ALL tote bag. Classy look and decent play of volumes characterize this tote handbag in vegan leather, with flat handles and braided detailing. Features a top zipper closure, spacious and organized inner space to fit your essentials, this shoulder bag is a new feminine and versatile must-have.</li>
-      <li class="">4.5"D x 12.5"W x 11.5"H (12" Drop)</li>
-      <li class="">Includes a side zippered pocket and two open pockets</li>
-      <li class="">Soft Montana West printed fabric lining</li>
-      <li class="mb-2">Essential for casual, work, and school use</li>
-    
+    <li class="">Oversized PU leather tote bags CARRY ALL your needs</li>
+    <li class="">Imported</li>
+    <li class="">Top zipper closure</li>
+    <li class="">A CARRY-ALL tote bag. Classy look and decent play of volumes characterize this tote handbag in vegan leather, with flat handles and braided detailing. Features a top zipper closure, spacious and organized inner space to fit your essentials, this shoulder bag is a new feminine and versatile must-have.</li>
+    <li class="">4.5"D x 12.5"W x 11.5"H (12" Drop)</li>
+    <li class="">Includes a side zippered pocket and two open pockets</li>
+    <li class="">Soft Montana West printed fabric lining</li>
+    <li class="mb-2">Essential for casual, work, and school use</li>
 
-      <div class=" row   mb-2 " >
-    <p class="p-2  product-desc-title" style="font-weight:600;">Customer Reviews</p>
-    <hr>
-    <ul style="list-style-type:none; font-size:18px;">
-      <li class="">5 star</li>
-      <li class="">4 star</li>
-      <li class="">3 star</li>
-      <li class="">2 star</li>
-      <li class="">1 star</li>
+
+    <div class=" row   mb-2 ">
+      <p class="p-2  product-desc-title" style="font-weight:600;">Customer Reviews</p>
+      <hr>
+      <ul style="list-style-type:none; font-size:18px; ">
+        <li class="">5 star</li>
+        <li class="">4 star</li>
+        <li class="">3 star</li>
+        <li class="">2 star</li>
+        <li class="">1 star</li>
+      </ul>
       <hr>
       <p class="  product-desc-title" style="font-weight:600;">Review this product</p>
       <p class="pb-2">Share your thoughts with other customers</p>
-      <button class="w-50 rounded border-0 " style="background-color:#282828;margin-bottom: 30px;">
+      <button class="w-50 rounded border-0 " style="background-color:#535357;margin-bottom: 30px;">
         <p class="p-2" style="color:#ffffff;">Write a customer review</p>
 
       </button>
-  </div>
+
+    </div>
   </div>
 
   <!-- Recommended items -->
