@@ -31,7 +31,7 @@
 <?php
 
 global $wpdb;
-$table = $wpdb->prefix . 'books';
+$table = $wpdb->prefix . 'products';
 
 $books = $wpdb->get_results("SELECT * FROM $table");
 $men = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'men'");
@@ -46,6 +46,51 @@ $women = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'wome
 ?>
 
 
+<div class="products-container">
+    <div class="Cheader">
+        <h2>Men</h2>
+    </div>
+    <hr>
+    <div class="pcontainer">
+        <?php
+        for ($i = 0; $i < min(count($men), 4); $i++) {
+            $book = $men[$i];
+        ?>
+            <div class="item">
+                <div class="product">
+                    <img src="<?php echo $book->main_img; ?>" alt="">
+                    <p class="name"><?php echo $book->product_name; ?></p>
+                    <h2 class="price"><?php echo $book->price; ?></h2>
+                    <p class="discount"><?php echo $book->discount; ?></p>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
+
+
+<div class="products-container">
+    <div class="Cheader">
+        <h2>women</h2>
+    </div>
+    <hr>
+    <div class="pcontainer">
+        <?php
+        for ($i = 0; $i < min(count($women), 4); $i++) {
+            $book = $women[$i];
+        ?>
+            <div class="item">
+                <div class="product">
+                    <img src="<?php echo $book->main_img; ?>" alt="">
+                    <p class="name"><?php echo $book->product_name; ?></p>
+                    <h2 class="price"><?php echo $book->price; ?></h2>
+                    <p class="discount"><?php echo $book->discount; ?></p>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
 
 
 <div class="products-container">
@@ -70,66 +115,6 @@ $women = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'wome
     </div>
 </div>
 
-
-
-<div class="products-container">
-    <div class="Cheader">
-        <h2>Men</h2>
-    </div>
-    <hr>
-    <div class="pcontainer">
-        <?php
-        $counter = 0;
-        foreach ($men as $book) {
-            if ($counter < 4) {
-        ?>
-            <div class="item">
-                <div class="product">
-                    <img src="<?php echo $book->main_img; ?>" alt="">
-                    <p class="name"><?php echo $book->product_name; ?></p>
-                    <h2 class="price"><?php echo $book->price; ?></h2>
-                    <p class="discount"><?php echo $book->discount; ?></p>
-                </div>
-            </div>
-        <?php
-                $counter++;
-            } else {
-                break;
-            }
-        }
-        ?>
-    </div>
-</div>
-
-
-<div class="products-container">
-    <div class="Cheader">
-        <h2>women</h2>
-    </div>
-    <hr>
-    <div class="pcontainer">
-        <?php
-        $counter = 0;
-        foreach ($women as $book) {
-            if ($counter < 4) {
-        ?>
-            <div class="item">
-                <div class="product">
-                    <img src="<?php echo $book->main_img; ?>" alt="">
-                    <p class="name"><?php echo $book->product_name; ?></p>
-                    <h2 class="price"><?php echo $book->price; ?></h2>
-                    <p class="discount"><?php echo $book->discount; ?></p>
-                </div>
-            </div>
-        <?php
-                $counter++;
-            } else {
-                break;
-            }
-        }
-        ?>
-    </div>
-</div>
 
 
 
