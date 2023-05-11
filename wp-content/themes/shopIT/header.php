@@ -41,7 +41,7 @@
                         <ion-icon class="dropdown" name="chevron-down-outline"></ion-icon>
                     </div>
                     <div class="SSacount">
-                        <a href="http://localhost/shopIT/sign-In/">Sign iiin</a>
+                        <a href="http://localhost/shopIT/sign-In/">Sign in</a>
                         <a href="http://localhost/shopIT/sign-up/">Sign up</a>
                     </div>
                 </div>

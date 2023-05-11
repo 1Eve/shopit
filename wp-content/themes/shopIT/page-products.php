@@ -7,20 +7,20 @@ get_header();
 ?>
 <?php
     global $wpdb;
-    $table = $wpdb->prefix . 'books';
+    $table = $wpdb->prefix . 'products';
 if(isset($_GET['s'])){
 
     $search = $_GET['s'];
     
     
-    $books = $wpdb->get_results("SELECT * FROM $table WHERE product_name LIKE %s");
+    $products = $wpdb->get_results("SELECT * FROM $table WHERE product_name LIKE %s");
     echo "jyf";
     
     // echo '<pre>';
-    var_dump($books);
+    // var_dump($products);
     // echo '</pre>'
 }else{
-    $books = $wpdb->get_results("SELECT * FROM $table");
+    $products = $wpdb->get_results("SELECT * FROM $table");
 }
 
 
@@ -40,16 +40,17 @@ if(isset($_GET['s'])){
 
     <div class="pcontainer">
         <?php
-        foreach ($books as $book) {
-        
+ 
+        foreach ($products as $product) {
+
         ?>
             <div class="item">
-                <a href="<?php echo "/shopIT/product-description?id={$book->id}" ?>">
+                <a href="<?php echo "/shopIT/product-description?id={$product->id}" ?>">
                     <div class="product">
-                        <img src="<?php echo $book->main_img; ?>" alt="">
-                        <p class="name"><?php echo $book->product_name; ?></p>
-                        <h2 class="price"><?php echo $book->price; ?></h2>
-                        <p class="discount"><?php echo $book->discount; ?></p>
+                        <img src="<?php echo $product->main_img; ?>" alt="">
+                        <p class="name"><?php echo $product->product_name; ?></p>
+                        <h2 class="price"><?php echo $product->price; ?></h2>
+                        <p class="discount"><?php echo $product->discount; ?></p>
                     </div>
                 </a>
             </div>

@@ -7,9 +7,9 @@ get_header() ?>
 <?php
 
 global $wpdb;
-$table = $wpdb->prefix . 'books';
+$table = $wpdb->prefix . 'products';
 
-$books = $wpdb->get_results("SELECT * FROM $table");
+$products = $wpdb->get_results("SELECT * FROM $table");
 
 // echo '<pre>';
 // var_dump($books);

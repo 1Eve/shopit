@@ -1,6 +1,6 @@
 <?php get_header();
 /**
- * Template Name: View Books
+ * Template Name: View products
  */
 ?>
 
@@ -12,9 +12,9 @@
     <?php
 
     global $wpdb;
-    $table = $wpdb->prefix . 'books';
+    $table = $wpdb->prefix . 'products';
 
-    $books = $wpdb->get_results("SELECT * FROM $table");
+    $products = $wpdb->get_results("SELECT * FROM $table");
 
     // echo '<pre>';
     // var_dump($books);
@@ -31,16 +31,16 @@
     <div class="test-div">
 
         <?php
-        foreach ($books as $book) {
+        foreach ($products as $product) {
         ?>
             <div class="item">
                 <div>
                     <div>
-                        <img src="<?php echo $book->main_img; ?>" alt="">
+                        <img src="<?php echo $product->main_img; ?>" alt="">
                     </div>
-                    <p class="name"><?php echo $book->product_name; ?></p>
-                    <h2 class="price"><?php echo $book->price; ?></h2>
-                    <p class="discount"><?php echo $book->discount; ?></p>
+                    <p class="name"><?php echo $product->product_name; ?></p>
+                    <h2 class="price"><?php echo $product->price; ?></h2>
+                    <p class="discount"><?php echo $product->discount; ?></p>
                 </div>
             <?php } ?>
             </div>
