@@ -10,7 +10,7 @@
       <img src="https://media.istockphoto.com/id/1144368446/photo/men-formal-wear-classy-outfit-business-suit.jpg?s=612x612&w=0&k=20&c=9ohd6ub6gdLTNdYtW2Cc64zTVHj0eX_eknN_lQGs4DE=" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://thumbs.dreamstime.com/b/uniqlo-clothing-store-interior-landscape-women-buying-new-clothes-shenzhen-china-garment-shop-choosing-149537227.jpg" class="d-block w-100" alt="...">
+      <img src="https://www.shutterstock.com/image-vector/set-6-retro-pinup-cute-260nw-260897675.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
       <img src="https://media.istockphoto.com/id/477001758/photo/dressing-closet-with-baby-clothes-arranged-on-hangers.jpg?s=612x612&w=0&k=20&c=Z8V20-BFX9tnN-9bNjbXPYPG7N8aAdxsStsv2XHrJak=" class="d-block w-100" alt="...">
@@ -47,8 +47,10 @@ $women = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'wome
 
 
 <div class="products-container">
-    <div class="Cheader">
+<div class="Cheader" style="display: flex; justify-content:space-between;">
         <h2>Men</h2>
+        <div style="margin-top: 10px; margin-right: 10px;"><h3><a href="/shopIT/products">SEE ALL</a></h3></div>
+        
     </div>
     <hr>
     <div class="pcontainer">
@@ -57,12 +59,15 @@ $women = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'wome
             $book = $men[$i];
         ?>
             <div class="item">
+            <a href="<?php echo "/shopIT/product-description?id={$product->id}" ?>">
+
                 <div class="product">
                     <img src="<?php echo $book->main_img; ?>" alt="">
                     <p class="name"><?php echo $book->product_name; ?></p>
                     <h2 class="price"><?php echo $book->price; ?></h2>
                     <p class="discount"><?php echo $book->discount; ?></p>
                 </div>
+            </a>
             </div>
         <?php } ?>
     </div>
@@ -71,8 +76,10 @@ $women = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'wome
 
 
 <div class="products-container">
-    <div class="Cheader">
-        <h2>women</h2>
+<div class="Cheader" style="display: flex; justify-content:space-between;">
+        <h2>Women</h2>
+        <div style="margin-top: 10px; margin-right: 10px;"><h3><a href="/shopIT/products">SEE ALL</a></h3></div>
+        
     </div>
     <hr>
     <div class="pcontainer">
@@ -81,12 +88,15 @@ $women = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'wome
             $book = $women[$i];
         ?>
             <div class="item">
+            <a href="<?php echo "/shopIT/product-description?id={$product->id}" ?>">
+
                 <div class="product">
                     <img src="<?php echo $book->main_img; ?>" alt="">
                     <p class="name"><?php echo $book->product_name; ?></p>
                     <h2 class="price"><?php echo $book->price; ?></h2>
                     <p class="discount"><?php echo $book->discount; ?></p>
                 </div>
+            </a>
             </div>
         <?php } ?>
     </div>
@@ -94,8 +104,10 @@ $women = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'wome
 
 
 <div class="products-container">
-    <div class="Cheader">
+    <div class="Cheader" style="display: flex; justify-content:space-between;">
         <h2>Kids</h2>
+        <div style="margin-top: 10px; margin-right: 10px;"><h3><a href="/shopIT/products">SEE ALL</a></h3></div>
+        
     </div>
     <hr>
     <div class="pcontainer">
@@ -104,12 +116,15 @@ $women = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'wome
             $book = $kids[$i];
         ?>
             <div class="item">
+            <a href="<?php echo "/shopIT/product-description?id={$product->id}" ?>">
+
                 <div class="product">
                     <img src="<?php echo $book->main_img; ?>" alt="">
                     <p class="name"><?php echo $book->product_name; ?></p>
                     <h2 class="price"><?php echo $book->price; ?></h2>
                     <p class="discount"><?php echo $book->discount; ?></p>
                 </div>
+            </a>
             </div>
         <?php } ?>
     </div>
