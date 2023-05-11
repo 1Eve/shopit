@@ -8,13 +8,14 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
 
 global $wpdb;
 $table = $wpdb->prefix . 'books';
+$id = $_GET['id'];
+$data = $wpdb->get_results("SELECT * FROM $table WHERE id=$id");
 
-$books = $wpdb->get_results("SELECT * FROM $table");
 
 
 ?>
 <div class="container">
-  <p class="p-2">Home > Fashion > Women’s Fashion > Hand bags & Wallets > Generic Classy Big Box Sling Bag
+  <p class="p-2"><?php echo "shopIT/product-description/{$data[0]->product_name}"?>
   </p>
   <div class="row mb-2 mt-2" style="background-color: #ffffff;">
     <div class="col-md-6">
@@ -23,21 +24,21 @@ $books = $wpdb->get_results("SELECT * FROM $table");
         <div class="card-body">
 
           <!-- Product image -->
-          <img src="<?php echo $product_image; ?>" alt="bag" class=" rounded mx-auto d-block img-fluid mb-3" style="width: 50%;">
+          <img src="<?php echo $data[0]->main_img; ?> " alt="bag" class=" rounded mx-auto d-block img-fluid mb-3" style="width: 50%;">
 
           <!-- Thumbnails -->
           <div class="row">
             <div class="col-3">
-              <img src="<?php echo $bag ?>" alt="bag" class="img-fluid border-1">
+              <img src="<?php echo $data[0]->image2; ?>" alt="bag" class="img-fluid border-1">
             </div>
             <div class="col-3">
-              <img src="<?php echo $bag ?>" alt="bag" class="img-fluid">
+              <img src="<?php echo $data[0]->image3; ?>" alt="bag" class="img-fluid">
             </div>
             <div class="col-3">
-              <img src="<?php echo $bag ?>" alt="bag" class="img-fluid">
+              <img src="<?php echo $data[0]->image4; ?>" alt="bag" class="img-fluid">
             </div>
             <div class="col-3">
-              <img src="<?php echo $bag ?>" alt="bag" class="img-fluid">
+              <img src="<?php echo $data[0]->image5; ?>" alt="bag" class="img-fluid">
             </div>
           </div>
         </div>
@@ -47,12 +48,12 @@ $books = $wpdb->get_results("SELECT * FROM $table");
       <!-- Product details -->
       <div class="card border-0 product-container">
         <div class="card-body">
-          <h5 class="card-title" style="font-size: 30px;">Generic Classy Big Box Sling Bag</h5>
+          <h5 class="card-title" style="font-size: 30px;"><?php echo $data[0]->product_name; ?></h5>
           <p class="card-text">
-            <small class="text-muted">Category: Accessories | Similar products from Accessories</small>
+            <small class="text-muted">Category: Accessories | <?php echo $data[0]->product_category; ?></small>
           </p>
           <p class="card-text font-weight-bold">(251 ratings)</p>
-          <p class="card-text font-weight-bold" style="margin-top: 60px;font-size: 28px;">KSh 2,100</p>
+          <p class="card-text font-weight-bold" style="margin-top: 60px;font-size: 28px;"><?php echo $data[0]->price; ?></p>
           <p class="card-text font-weight-light discount">KSh 2,100</p>
           <p class="card-text font-weight-bold" style="color:#4ED02E; font-weight:700;">In stock</p>
 
@@ -72,26 +73,19 @@ $books = $wpdb->get_results("SELECT * FROM $table");
     <p class="p-2  product-desc-title" style="font-weight:600;">About the Item</p>
     <hr>
 
-    <li class="">Oversized PU leather tote bags CARRY ALL your needs</li>
-    <li class="">Imported</li>
-    <li class="">Top zipper closure</li>
-    <li class="">A CARRY-ALL tote bag. Classy look and decent play of volumes characterize this tote handbag in vegan leather, with flat handles and braided detailing. Features a top zipper closure, spacious and organized inner space to fit your essentials, this shoulder bag is a new feminine and versatile must-have.</li>
-    <li class="">4.5"D x 12.5"W x 11.5"H (12" Drop)</li>
-    <li class="">Includes a side zippered pocket and two open pockets</li>
-    <li class="">Soft Montana West printed fabric lining</li>
-    <li class="mb-2">Essential for casual, work, and school use</li>
+    <p><?php echo $data[0]->product_description; ?></p>
 
 
     <div class=" row   mb-2 ">
       <p class="p-2  product-desc-title" style="font-weight:600;">Customer Reviews</p>
       <hr>
-      <ul style="list-style-type:none; font-size:18px; ">
-        <li class="">5 star</li>
-        <li class="">4 star</li>
-        <li class="">3 star</li>
-        <li class="">2 star</li>
-        <li class="">1 star</li>
-      </ul>
+      <div class="">
+                        <p>5 stars &nbsp; <button class="btn btn-secondary w-75" type="button"></button></p>
+                        <p>4 stars &nbsp;<button class="btn btn-secondary w-0" type="button"></button></p>
+                        <p>3 stars &nbsp;<button class="btn btn-secondary w-0" type="button"></button></p>
+                        <p>2 stars &nbsp;<button class="btn btn-secondary w-0" type="button"></button></p>
+                        <p>1 star &nbsp; &nbsp;<button class="btn btn-secondary w-0" type="button"></button></p>
+                    </div>
       <hr>
       <p class="  product-desc-title" style="font-weight:600;">Review this product</p>
       <p class="pb-2">Share your thoughts with other customers</p>

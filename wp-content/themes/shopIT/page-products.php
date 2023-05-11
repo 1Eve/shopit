@@ -41,7 +41,7 @@ if(isset($_GET['s'])){
     <div class="pcontainer">
         <?php
         foreach ($books as $book) {
-            var_dump ($book);
+        
         ?>
             <div class="item">
                 <a href="<?php echo "/shopIT/product-description?id={$book->id}" ?>">
