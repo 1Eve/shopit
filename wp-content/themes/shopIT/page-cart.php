@@ -5,7 +5,7 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
 
 <div class="container">
   <div class="row d-flex">
-    <div class=" row mb-2 mt-2 w-75 " style="background-color: #ffffff;">
+    <div class=" row mb-2 mt-2 " style="background-color: #ffffff;width:80%;">
       <p class="p-2  product-desc-title" style="font-weight:700;">CART(2)</p>
       <hr>
 
@@ -45,16 +45,16 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
 
             <div class="input-group mb-3 ">
               <button class=" minus-btn border-0 rounded p-3" style="background-color: #F68B1E;font-weight:600" type="button">-</button>
-              <input type="text" style="margin-left:1px;font-weight:600;" class=" text-center border-0  counter" value="1">
+              <input type="text" style="margin-left:1px;font-weight:600;padding: 0 1px;" class=" text-center border-0  counter" value="1" readonly>
               <button class=" plus-btn border-0 rounded p-3" style="background-color: #F68B1E;font-weight:600" type="button">+</button>
 
               <?php echo "<script>
   
-  var counterInput = document.querySelector('.counter');
+  let counterInput = document.querySelector('.counter');
 
   
-  var minusBtn = document.querySelector('.minus-btn');
-  var plusBtn = document.querySelector('.plus-btn');
+  let minusBtn = document.querySelector('.minus-btn');
+  let plusBtn = document.querySelector('.plus-btn');
 
 
   minusBtn.addEventListener('click', function() {
@@ -65,13 +65,14 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
   });
 
   plusBtn.addEventListener('click', function() {
-    var value = parseInt(counterInput.value);
+    let value = parseInt(counterInput.value);
     counterInput.value = value + 1;
   });
 </script> "  ?>
 
             </div>
-            <ion-icon name="trash" size="large" style="color:red;"></ion-icon>
+            <button class="border-0 bg-white"><ion-icon name="trash" size="large" style="color:red;"></ion-icon></button>
+
           </div>
 
         </div>
