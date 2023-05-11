@@ -448,3 +448,12 @@ margin-left: -10%;
 
 
 
+#carouselExampleDark {
+height: 20vh;
+}
+
+.carousel-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
