@@ -22,7 +22,7 @@
             </div>
             <!-- <a href="http://localhost/shopIT/book-v/">Book view</a> -->
             <a href="http://localhost/shopIT/book-reg/">Add product</a>
-            <form action="<?php echo home_url('/') ?>" method="get" role="search">
+            <form action="<?php echo home_url('/products') ?>" method="get" role="search">
                 <div class="navSearch">
                     <ion-icon name="search-outline"></ion-icon>
                     <input class="navSearch" type="search" name="s" placeholder="Search" title="Search" value="<?php echo get_Search_query(); ?>">
