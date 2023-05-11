@@ -39,16 +39,18 @@ class BookReg{
         $table_name = $wpdb->prefix.'books';
 
         $book_details = "CREATE TABLE IF NOT EXISTS ".$table_name."(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
             main_img text NOT NULL,
-            image2 text NOT NULL,
-            image3 text NOT NULL,
-            image4 text NOT NULL,
-            image5 text NOT NULL,
+            image2 text,
+            image3 text,
+            image4 text,
+            image5 text,
             price text NOT NULL,
             discount text NOT NULL,
             product_name text NOT NULL,
             product_description text NOT NULL,
             product_category text NOT NULL
+            
         );";
 
         require_once(ABSPATH.'wp-admin/includes/upgrade.php');
