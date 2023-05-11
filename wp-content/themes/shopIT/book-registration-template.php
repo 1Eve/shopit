@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Book Registration
+ * Template Name: product Registration
  */
 
  get_header(); 
@@ -13,7 +13,7 @@
     <!-- Success message popup -->
     <?php
         echo '<div class="alert alert-success" role="alert" id="successmsg">
-                Book Registered Successfully
+                product Registered Successfully
              </div>';
 
         echo '<script> document.getElementById("successmsg").style.display = "none"; </script>';
@@ -37,7 +37,7 @@
     <!-- Error message popup -->
     <?php
         echo '<div class="alert alert-danger" role="alert" id="errormsg">
-                Book not registered, an error occured
+                product not registered, an error occured
              </div>';
 
         echo '<script> document.getElementById("errormsg").style.display = "none"; </script>';

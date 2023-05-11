@@ -105,7 +105,7 @@ class Shopit{
     }
 
     function add_admin_page(){
-        add_menu_page('Book Registration', 'Register Book', 'manage_options', 'register_book', [$this, 'admin_index_cb'], 'dashicons-welcome-write-blog', 110);
+        add_menu_page('Book Registration', 'Add Product', 'manage_options', 'register_book', [$this, 'admin_index_cb'], 'dashicons-welcome-write-blog', 110);
     }
     
     function admin_index_cb(){

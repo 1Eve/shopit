@@ -17,28 +17,28 @@
 //  Security Check
 defined('ABSPATH') or die('Hey you hacker, got you!');
 
-class BookReg{
+class productReg{
     function __construct(){
-        $this->add_book_to_db();
+        $this->add_product_to_db();
         $this->createLibrarian();
     }
 
     function activateExternally(){
-        require_once plugin_dir_path(__FILE__). 'inc/book-registration-activate.php';
-        BookRegActivate::activatePlugin();
+        require_once plugin_dir_path(__FILE__). 'inc/product-registration-activate.php';
+        productRegActivate::activatePlugin();
     }
 
     function deactivateExternally(){
-        require_once plugin_dir_path(__FILE__). 'inc/book-registration-deactivate.php';
-        BookRegDeactivate::deactivatePlugin();
+        require_once plugin_dir_path(__FILE__). 'inc/product-registration-deactivate.php';
+        productRegDeactivate::deactivatePlugin();
     }
 
     static function create_table_to_db(){
         global $wpdb;
 
-        $table_name = $wpdb->prefix.'books';
+        $table_name = $wpdb->prefix.'products';
 
-        $book_details = "CREATE TABLE IF NOT EXISTS ".$table_name."(
+        $product_details = "CREATE TABLE IF NOT EXISTS ".$table_name."(
             id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
             main_img text NOT NULL,
             image2 text,
@@ -54,10 +54,10 @@ class BookReg{
         );";
 
         require_once(ABSPATH.'wp-admin/includes/upgrade.php');
-        dbDelta($book_details);
+        dbDelta($product_details);
     }
 
-    function add_book_to_db(){
+    function add_product_to_db(){
         if(isset($_POST['submitbtn'])){
             $data =[
                 'main_img'=> $_POST['main_img'],
@@ -79,13 +79,13 @@ class BookReg{
             $successmessage = false;
             $errormessage = false;
 
-            $table_name = $wpdb->prefix.'books';
+            $table_name = $wpdb->prefix.'products';
 
             $result = $wpdb->insert($table_name, $data, $format=NULL);
 
             if($result == true){
                 $successmessage = true;
-                echo "<script> alert('Book Registered successfully'); </script>";
+                echo "<script> alert('product Registered successfully'); </script>";
             }else{
                 $errormessage = true;
                 echo "<script> alert('Unable to Register'); </script>";
@@ -111,14 +111,14 @@ class BookReg{
     }
 }
 
-if(class_exists('BookReg')){
-    $bookRegInstance = new BookReg();
+if(class_exists('productReg')){
+    $productRegInstance = new productReg();
 }
 
 //Activate Plugin
-// register_activation_hook (__FILE__, [$bookRegInstance, 'activateExternally']);
-$bookRegInstance->activateExternally();
+// register_activation_hook (__FILE__, [$productRegInstance, 'activateExternally']);
+$productRegInstance->activateExternally();
 
 //Deactivate Plugin
-// register_deactivation_hook (__FILE__, [$bookRegInstance, 'deactivateExternally']);
-$bookRegInstance->deactivateExternally();
+// register_deactivation_hook (__FILE__, [$productRegInstance, 'deactivateExternally']);
+$productRegInstance->deactivateExternally();
