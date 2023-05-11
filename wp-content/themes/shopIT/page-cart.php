@@ -2,7 +2,26 @@
 <?php
 $bag = get_template_directory_uri() . '/assets/bag.jpg';
 ?>
+<?php
+    global $wpdb;
+    $table = $wpdb->prefix . 'products';
+if(isset($_GET['s'])){
 
+    $search = $_GET['s'];
+    
+    
+    $products = $wpdb->get_results("SELECT * FROM $table WHERE product_name LIKE %s");
+    echo "jyf";
+    
+    // echo '<pre>';
+    // var_dump($products);
+    // echo '</pre>'
+}else{
+    $products = $wpdb->get_results("SELECT * FROM $table");
+}
+
+
+?>
 <div class="container">
   <div class="row d-flex">
     <div class=" row mb-2 mt-2 " style="background-color: #ffffff;width:80%;">
@@ -43,7 +62,7 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
         <div class="card border-0">
           <div class="d-flex row justify-content-end p-2">
 
-            <div class="input-group mb-3 ">
+            <div class=" mb-3 ">
               <button class=" minus-btn border-0 rounded p-3" style="background-color: #F68B1E;font-weight:600" type="button">-</button>
               <input type="text" style="margin-left:1px;font-weight:600;padding: 0 1px;" class=" text-center border-0  counter" value="1" readonly>
               <button class=" plus-btn border-0 rounded p-3" style="background-color: #F68B1E;font-weight:600" type="button">+</button>
@@ -89,39 +108,61 @@ $bag = get_template_directory_uri() . '/assets/bag.jpg';
     <div class="" style="background-color: #ffffff;">
       <p class="" style="font-size:20px; font-weight: 600;">You may also like</p>
     </div>
-    <div class="product">
-      <div class="item">
-        <img src="<?php echo $bag ?>" alt="bag">
-        <p class="name">Generic outfit</p>
-        <p class="price">Ksh 2,500</p>
-        <p class="discount">Ksh 5,000</p>
-      </div>
-      <div class="item">
-        <img src="<?php echo $bag ?>" alt="bag">
-        <p class="name">Generic outfit</p>
-        <p class="price">Ksh 2,500</p>
-        <p class="discount">Ksh 5,000</p>
-      </div>
-      <div class="item">
-        <img src="<?php echo $bag ?>" alt="bag">
-        <p class="name">Generic outfit</p>
-        <p class="price">Ksh 2,500</p>
-        <p class="discount">Ksh 5,000</p>
-      </div>
-      <div class="item">
-        <img src="<?php echo $bag ?>" alt="bag">
-        <p class="name">Generic outfit</p>
-        <p class="price">Ksh 2,500</p>
-        <p class="discount">Ksh 5,000</p>
-      </div>
+    <?php
+    global $wpdb;
+    $table = $wpdb->prefix . 'products';
+if(isset($_GET['s'])){
+
+    $search = $_GET['s'];
+    
+    
+    $products = $wpdb->get_results("SELECT * FROM $table WHERE product_name LIKE %s");
+    echo "jyf";
+    
+    // echo '<pre>';
+    // var_dump($products);
+    // echo '</pre>'
+}else{
+    $products = $wpdb->get_results("SELECT * FROM $table");
+}
+
+
+?>
+
+
+
+
+<div class="w-100 mt-3 mr-2" style="background-color: #ffffff;">
+    <div class="Cheader">
+        <h2>Top picks</h2>
     </div>
+    <hr>
+
+    <div class="pcontainer">
+        <?php
+ 
+        foreach ($products as $product) {
+
+        ?>
+            <div class="item">
+                <a href="<?php echo "/shopIT/product-description?id={$product->id}" ?>">
+                    <div class="product">
+                        <img src="<?php echo $product->main_img; ?>" alt="">
+                        <p class="name"><?php echo $product->product_name; ?></p>
+                        <h2 class="price"><?php echo $product->price; ?></h2>
+                        <p class="discount"><?php echo $product->discount; ?></p>
+                    </div>
+                </a>
+            </div>
+        <?php } ?>
+    </div>
+
+</div>
+
+
+
 
 
   </div>
 
-
-
-
-</div>
-
-<?php get_footer() ?>
+  <?php get_footer() ?>
