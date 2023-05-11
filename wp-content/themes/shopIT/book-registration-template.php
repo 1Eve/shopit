@@ -79,12 +79,18 @@
                 <input type="text" name="discount" id="discount" class="form-control input-sm mb-3" placeholder="discount" required>
             </div>
             <div class="form-group">
-                <input type="text" name="product_name" id="product_name" class="form-control input-sm mb-3" placeholder="product_name" required>
+                <input type="text" name="product_name" id="product_name" class="form-control input-sm mb-3" placeholder="product name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="product_description" id="product_description" class="form-control input-sm mb-3" placeholder="product description" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="product_category" id="product_category" class="form-control input-sm mb-3" placeholder="product category" required>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-xs-4 col-sm-4 col-md-4">
-                    <input type="submit" value="Register Book" name="submitbtn" class="btn btn-color">
+                    <input type="submit" value="Add product" name="submitbtn" class="btn btn-color">
                 </div>
             </div>
         </form>
