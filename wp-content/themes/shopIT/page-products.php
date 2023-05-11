@@ -41,9 +41,10 @@ if(isset($_GET['s'])){
     <div class="pcontainer">
         <?php
         foreach ($books as $book) {
+            var_dump ($book);
         ?>
             <div class="item">
-                <a href="">
+                <a href="<?php echo "/shopIT/product-description?id={$book->id}" ?>">
                     <div class="product">
                         <img src="<?php echo $book->main_img; ?>" alt="">
                         <p class="name"><?php echo $book->product_name; ?></p>
