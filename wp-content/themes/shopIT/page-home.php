@@ -3,6 +3,102 @@
     $bag = get_template_directory_uri().'/assets/bag.jpg';
 ?>
 
+
+<div class="carousel">
+  <img src="/assets/bag.jpg" alt="Image 1">
+  <img src="image2.jpg" alt="Image 2">
+  <img src="image3.jpg" alt="Image 3">
+</div>
+
+
+<style>
+    .carousel {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel img:first-child {
+  display: block;
+}
+
+.carousel img.active {
+  display: block;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel button.prev {
+  left: 10px;
+}
+
+.carousel button.next {
+  right: 10px;
+}
+
+.carousel button:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://cdn.jsdelivr.net/gh/solodev/carousel-arrow.svg');
+  background-size: cover;
+}
+
+.carousel button.prev:before {
+  transform: rotate(180deg);
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #999;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.carousel-indicators li.active {
+  background-color: #333;
+}
+
+</style>
+
+
+
+
+
+
+
+
 <style>
   #carouselExampleDark {
     height: 20vh;
@@ -30,7 +126,7 @@
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
+    <div style="height: 50%;" class="carousel-item" data-bs-interval="2000">
       <img src="https://media.istockphoto.com/id/1041286698/photo/row-of-mens-shirts-in-blue-colors-on-hanger.jpg?s=612x612&w=0&k=20&c=6Id24qoPNg4LSaovnOMJCE540ZcPllWaLNLLIoHBgls=" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Second slide label</h5>
@@ -64,6 +160,9 @@ global $wpdb;
 $table = $wpdb->prefix . 'books';
 
 $books = $wpdb->get_results("SELECT * FROM $table");
+$men = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'men'");
+$kids = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'kids'");
+$women = $wpdb->get_results("SELECT * FROM $table WHERE product_category = 'women'");
 
 // echo '<pre>';
 // var_dump($books);
@@ -86,7 +185,7 @@ $books = $wpdb->get_results("SELECT * FROM $table");
     <hr>
     <div class="pcontainer">
         <?php
-        foreach ($books as $book) {
+        foreach ($kids as $book) {
         ?>
             <div class="item">
                 <div class="product">
@@ -99,5 +198,117 @@ $books = $wpdb->get_results("SELECT * FROM $table");
         <?php } ?>
     </div>
 </div>
+
+
+<div class="products-container">
+    <div class="Cheader">
+        <h2>Men</h2>
+    </div>
+    <hr>
+    <div class="pcontainer">
+        <?php
+        foreach ($men as $book) {
+        ?>
+            <div class="item">
+                <div class="product">
+                    <img src="<?php echo $book->main_img; ?>" alt="">
+                    <p class="name"><?php echo $book->product_name; ?></p>
+                    <h2 class="price"><?php echo $book->price; ?></h2>
+                    <p class="discount"><?php echo $book->discount; ?></p>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
+
+<div class="products-container">
+    <div class="Cheader">
+        <h2>women</h2>
+    </div>
+    <hr>
+    <div class="pcontainer">
+        <?php
+        foreach ($women as $book) {
+        ?>
+            <div class="item">
+                <div class="product">
+                    <img src="<?php echo $book->main_img; ?>" alt="">
+                    <p class="name"><?php echo $book->product_name; ?></p>
+                    <h2 class="price"><?php echo $book->price; ?></h2>
+                    <p class="discount"><?php echo $book->discount; ?></p>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+    const carousel = document.querySelector(".carousel");
+const images = carousel.querySelectorAll("img");
+const prevButton = carousel.querySelector(".prev");
+const nextButton = carousel.querySelector(".next");
+const indicators = carousel.querySelector(".carousel-indicators");
+
+let index = 0;
+let timer;
+
+function showImage(n) {
+  images[index].classList.remove("active");
+  indicators.children[index].classList.remove("active");
+  index = (n + images.length) % images.length;
+  images[index].classList.add("active");
+  indicators.children[index].classList.add("active");
+}
+
+function prevImage() {
+  showImage(index - 1);
+}
+
+function nextImage() {
+  showImage(index + 1);
+}
+
+function startTimer() {
+  timer = setInterval(nextImage, 5000);
+}
+
+function stopTimer() {
+  clearInterval(timer);
+}
+
+prevButton.addEventListener("click", () => {
+  stopTimer();
+  prevImage();
+  startTimer();
+});
+
+nextButton.addEventListener("click", () => {
+  stopTimer();
+  nextImage();
+  startTimer();
+});
+
+for (let i = 0; i < images.length; i++) {
+  const indicator = document.createElement("li");
+  if (i === index) {
+    indicator.classList.add("active");
+  }
+  indicator.addEventListener("click", () => {
+    stopTimer();
+    showImage(i);
+    startTimer();
+  });
+  indicators.appendChild(indicator);
+}
+
+startTimer();
+
+</script>
 
 <?php get_footer(); ?>
