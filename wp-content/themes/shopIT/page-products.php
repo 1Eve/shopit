@@ -6,15 +6,22 @@
 get_header();
 ?>
 <?php
+    global $wpdb;
+    $table = $wpdb->prefix . 'books';
+if(isset($_GET['s'])){
 
-global $wpdb;
-$table = $wpdb->prefix . 'books';
-
-$books = $wpdb->get_results("SELECT * FROM $table");
-
-// echo '<pre>';
-// var_dump($books);
-// echo '</pre>'
+    $search = $_GET['s'];
+    
+    
+    $books = $wpdb->get_results("SELECT * FROM $table WHERE product_name LIKE %s");
+    echo "jyf";
+    
+    // echo '<pre>';
+    var_dump($books);
+    // echo '</pre>'
+}else{
+    $books = $wpdb->get_results("SELECT * FROM $table");
+}
 
 
 ?>
