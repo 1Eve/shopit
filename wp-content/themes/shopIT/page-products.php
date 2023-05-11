@@ -40,7 +40,9 @@ if(isset($_GET['s'])){
 
     <div class="pcontainer">
         <?php
+ 
         foreach ($products as $product) {
+
         ?>
             <div class="item">
                 <a href="<?php echo "/shopIT/product-description?id={$product->id}" ?>">
