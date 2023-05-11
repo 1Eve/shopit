@@ -18,10 +18,10 @@
     <div class="Ncontainer">
         <nav>
             <div class="Nlogo">
-                <a href=""><img src="<?php echo $logo ?>" alt="bag"></a>
+                <a href="http://localhost/shopIT/home/"><img src="<?php echo $logo ?>" alt="bag"></a>
             </div>
-            <a href="http://localhost/shopIT/book-v/">Book view</a>
-            <a href="http://localhost/shopIT/book-reg/">Book Registration</a>
+            <!-- <a href="http://localhost/shopIT/book-v/">Book view</a> -->
+            <a href="http://localhost/shopIT/book-reg/">Add product</a>
             <form action="<?php echo home_url('/') ?>" method="get" role="search">
                 <div class="navSearch">
                     <ion-icon name="search-outline"></ion-icon>
@@ -41,13 +41,13 @@
                         <ion-icon class="dropdown" name="chevron-down-outline"></ion-icon>
                     </div>
                     <div class="SSacount">
-                        <a href="">Sign in</a>
-                        <a href="">Sign up</a>
+                        <a href="http://localhost/shopIT/sign-in/">Sign in</a>
+                        <a href="http://localhost/shopIT/sign-up/">Sign up</a>
                     </div>
                 </div>
                 <div class="navCart">
                     <ion-icon name="cart-outline" size="large"></ion-icon>
-                    <a href="">Cart</a>
+                    <a href="http://localhost/shopIT/cart/">Cart</a>
                 </div>
             </div>
         </nav>

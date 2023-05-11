@@ -46,7 +46,9 @@ class BookReg{
             image5 text NOT NULL,
             price text NOT NULL,
             discount text NOT NULL,
-            product_name text NOT NULL
+            product_name text NOT NULL,
+            product_description text NOT NULL,
+            product_category text NOT NULL
         );";
 
         require_once(ABSPATH.'wp-admin/includes/upgrade.php');
@@ -63,7 +65,9 @@ class BookReg{
                 'image5'=> $_POST['image5'],
                 'price'=> $_POST['price'],
                 'discount'=> $_POST['discount'],
-                'product_name'=> $_POST['product_name']
+                'product_name'=> $_POST['product_name'],
+                'product_description'=> $_POST['product_description'],
+                'product_category'=> $_POST['product_category'],
             ];
 
             global $wpdb;
