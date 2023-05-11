@@ -1,5 +1,5 @@
 <footer>
-  
+
     <div class="footer-container">
         <div class="shopIT">
             <h1>shopIT</h1>
@@ -20,7 +20,7 @@
             <div>
                 <a href=""><ion-icon name="logo-youtube" size="large"></ion-icon></a>
                 <a href=""><ion-icon name="logo-instagram" size="large"></ion-icon></a>
-                <a href=""><ion-icon name="logo-facebook" size="large" ></ion-icon></a>
+                <a href=""><ion-icon name="logo-facebook" size="large"></ion-icon></a>
             </div>
         </div>
     </div>
