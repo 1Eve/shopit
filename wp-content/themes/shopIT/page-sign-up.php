@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) : ?>
     } else {
       wp_update_user(array('ID' => $user_id, 'role' => 'subscriber'));
       // echo '<p class="signup-success">Your account has been created successfully. Please login using your credentials.</p>';
-      echo("<script>location.href = 'http://localhost/shopit';</script>");
+      echo ("<script>location.href = 'http://localhost/shopit';</script>");
       // exit(wp_redirect("Location: /shopit/sign-in"));
     }
   } else {
@@ -59,6 +59,9 @@ if (isset($_POST['submit'])) : ?>
 <?php endif; ?>
 
 <form action="" method="post">
+  <div class="Shead">
+
+  </div>
   <div class="s-up">
     <div class="sign-up">
       <div class="sheader1">

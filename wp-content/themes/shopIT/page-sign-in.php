@@ -4,7 +4,7 @@
 
 // Check if user is already logged in
 if (is_user_logged_in()) {
-    wp_redirect('/shopit'); // Redirect to dashboard if already logged in
+    wp_redirect('/shopit/home'); // Redirect to dashboard if already logged in
     exit;
 }
 
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
         wp_set_auth_cookie($user->ID);
         do_action('wp_login', $user->user_login, $user);
 
-        wp_redirect('/shopit');
+        wp_redirect('/shopit/home');
         exit;
       }
       echo "server error";
